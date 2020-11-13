@@ -1,0 +1,10 @@
+<h1>Make your own COCKTAILS</h1>
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name, label: 'Cocktail name', error: 'Username is mandatory, please specify one' %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
+<br>
+<br>
+<%= link_to cocktails_path do %>
+  <h5> Back to Home Page </h5>
+<% end %>

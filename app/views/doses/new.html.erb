@@ -1,0 +1,10 @@
+<%= simple_form_for [ @cocktail, @dose ] do |f| %>
+<%= f.input :description, label: 'Add a description of your recipe', error: 'please specify one' %>
+<%= f.input :ingredient_id, collection: Ingredient.all %>
+<%= f.submit "Submit ingredients", class: "btn btn-primary" %>
+<% end %>
+<br>
+<br>
+<%= link_to cocktails_path do %>
+  <h5> Back to Home Page </h5>
+<% end %>
