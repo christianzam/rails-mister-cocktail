@@ -1,13 +1,22 @@
-<h1>Cocktails</h1>
-  <ol>
-    <% @cocktails.each do |cocktail| %>
-      <li>
-        <%= link_to cocktail.name, cocktail_path(cocktail) %>
-      </li>
-    <% end %>
-  </ol>
-<br>
-<br>
-<%= link_to new_cocktail_path do %>
-  <h5> CERATE YOUR COCKTAIL </h5>
-<% end %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'cocktails.jpg' %>');">
+  <div class="banner-content">
+    <h1>Mr.Cocktail</h1>
+    <p>Awesome beverages for developers nightlife</p>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>Cocktails created so far:</h1>
+        <ol>
+          <% @cocktails.each do |cocktail| %>
+            <li>
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            </li>
+          <% end %>
+        </ol>
+    </div>
+  </div>
+</div>
